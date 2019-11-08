@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>logeado</h1>
+	<span th:text="${estado}"></span>
+	<form action="#" th:action="@{/usuarioCreado}" th:object="${login}" method="post">
+    	<h2>Ingrese sus Datos:</h2>
+    	<p>name: <input type="text" th:field="*{name}" /></p>
+        <p>password: <input type="text" th:field="*{pass}" /></p>
+        <p><input type="submit" value="Crear Usuario" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
